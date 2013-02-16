@@ -1,0 +1,23 @@
+[
+  { "keys": ["ctrl+shift+."], "command": "erb" },
+  { "keys": ["ctrl+shift+b"], "command": "insert_snippet", "args": {"contents": "${TM_COMMENT_START/s*$//} ==${1/./=/g}==${TM_COMMENT_END/^s*(.+)/ $1/}\n${TM_COMMENT_START/s*$//} = ${1:Banner} =${TM_COMMENT_END/^s*(.+)/ $1/}\n${TM_COMMENT_START/s*$//} ==${1/./=/g}==${TM_COMMENT_END/^s*(.+)/ $1/}"}},
+
+  // open this keybindings file
+  {
+    "keys": ["super+ctrl+,"],
+    "command": "open_file",
+    "args": {"file": "${packages}/User/Default ($platform).sublime-keymap"}
+  },
+  // go to line
+  {
+    "keys": ["super+l"],
+    "command": "show_overlay",
+    "args": {"overlay": "goto", "text": ":"}
+  },
+  // close all other tabs
+  {
+    "keys": ["super+alt+w"],
+    "command": "close_other_tabs"
+  }
+
+]
